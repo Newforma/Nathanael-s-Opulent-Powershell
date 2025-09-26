@@ -138,7 +138,7 @@ function Edit-Profile
 
 function NK-Logoff()
 {
-	Get-ChildItem -Path "C:\Users\npage.NEWFORMA\AppData\Local\Newforma\NKTokenCache" -Include *.* -File -Recurse | foreach { $_.Delete()}
+	Get-ChildItem -Path "$env:UserProfile\AppData\Local\Newforma\NKTokenCache" -Include *.* -File -Recurse | foreach { $_.Delete()}
 }
 
 function Build-CPP()
